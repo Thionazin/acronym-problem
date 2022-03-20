@@ -9,17 +9,29 @@ MAX = 10**15
 
 cases = 0
 
+inputstring = stdin.readline()
+inputstring.strip()
+assert isinstance(inputstring, str)
+assert inputstring.isupper()
+assert len(inputstring) >= 1
+assert len(inputstring) <= 1000
+
+amount = stdin.readline()
+amount.strip()
+assert re.match(integer, amount)
+assert int(amount) >= len(inputstring)
+assert int(amount) <= 1e6
+assert int(amount) >= 1
+
 while True:
     line = stdin.readline()
-    if len(line) == 0:
+    if len(line) == 0 or line == "\n":
         break
-    assert re.match(integer + " " + integer + "\n", line), "'%s' is not a pair of integers" % line
-    (n, m) = map(int, line.split())
-    assert 0 <= n <= MAX, "%s  not in [0, %s]" % (n, MAX)
-    assert 0 <= m <= MAX, "%s  not in [0, %s]" % (m, MAX)
+    assert line[0].isupper()
+    assert len(line) <= 1000
     cases += 1
 
-assert 1 <= cases <= 40, "invalid number of cases %d not in [1,40]" % cases
+assert cases == int(amount)
 
 # Nothing to report
 sys.exit(42)
