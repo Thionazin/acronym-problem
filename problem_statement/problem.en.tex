@@ -1,14 +1,11 @@
-\problemname{A Different Problem}
+\problemname{Acronyms}
 
-Write a program that computes the difference between non-negative integers.
+You've probably all heard of the likes of FAANG (Facebook Amazon Apple Netflix Google) or MAMAA (Meta Apple Microsoft Amazon Alphabet). The point is, these fancy-pants stock investors love their acronyms. However in this changing world with constant renaming and rebranding, these acronyms don't stay relevant for long. Facebook became Meta. Google gained a parent company in the form of Alphabet. Microsoft became the world's most valuable company after Apple shares dipped. With their love of acronyms staying strong, these investors have come to you with a serious problem that they need a serious solution for. Given a list of companies and a target acronym, they want you to provide a single list of companies that fit with the acronym. Since these are some fickle investors, they want you to prioritize the companies by the order they come in. Like for example, if target acronym contains an M, and the list of companies has Microsoft, Mapple, and Metflix, then Microsoft is the one used in the acronym. If there were two Ms, then the first M would be Microsoft, and the second M would be Mapple. Thus if the target acronym is MM, the the output string would be 'Microsoft Mapple'.
 
 \section*{Input}
 
-The input consists of multiple test cases (at least $1$ and at most
-$40$), one per line.  Each test case consists of a pair of integers,
-between $0$ and $10^{15}$ (inclusive).  The input is terminated by
-end of file.
+The input consists of a single test case. The first line contains a single string with no spaces which is the target acronym. The length of that string will be at least $1$ character and at most $10^{9}$ characters long. That is followed by an integer n $1 \le n \le 10^{9}$, denoting the number of companies which follow. Then there are n lines which are unique strings that are the names of the companies.
 
 \section*{Output}
 
-For each pair of integers in the input, output one line, containing the absolute value of their difference.
+Print out a single line consisting of names of companies matched to the letters in the acronym in order of when they appear in the input. Each company name string should be seperated by a space.
